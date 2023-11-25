@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Money - Expense Tracker</title>
+    <link rel="stylesheet" href="expensehome.css">
+    
+</head>
+<body>
+    <h1>Expense and Income Tracker</h1>
+
+    <!-- Expense Entry Form -->
+    <div class="forms-container">
+        <!-- Expense Entry Form -->
+        <div class="form-box">
+            <div class="form">
+                <h2>Expense Entry</h2>
+                <form id="expenseForm">
+        <label for="expenseDate">Date:</label>
+        <input type="date" id="expenseDate" required><br>
+
+        <label for="expenseCategory">Category:</label>
+        <select id="expenseCategory" required>
+            <option value="food">Food</option>
+            <option value="transportation">Transportation</option>
+            <option value="rent">Rent</option>
+            <!-- Add more categories as needed -->
+        </select><br>
+
+        <label for="expenseAmount">Amount:</label>
+        <input type="number" id="expenseAmount" required><br>
+
+        <label for="expenseNotes">Notes:</label>
+        <textarea id="expenseNotes" rows="4"></textarea><br>
+
+        <button type="submit">Add Expense</button>
+    </form>
+</div>
+</div>
+
+
+    <!-- Income Entry Form -->
+    <div class="form-box">
+        <div class="form">
+            <h2>Income Entry</h2>
+            <form id="incomeForm">
+        <label for="incomeDate">Date:</label>
+        <input type="date" id="incomeDate" required><br>
+
+        <label for="incomeSource">Source:</label>
+        <input type="text" id="incomeSource" required><br>
+
+        <label for="incomeAmount">Amount:</label>
+        <input type="number" id="incomeAmount" required><br>
+
+        <label for="incomeNotes">Notes:</label>
+        <textarea id="incomeNotes" rows="4"></textarea><br>
+
+        <button type="submit">Add Income</button>
+    </form>
+</div>
+</div>
+
+    <!-- Transfer Money Form -->
+    <div class="form-box">
+        <div class="form">
+<h2>Transfer Money</h2>
+
+<form id="transferForm">
+    <label for="fromAccount">From Account:</label>
+    <select id="fromAccount" required>
+        <option value="Cash">Cash</option>
+        <option value="Bank">Bank</option>
+        <option value="Bkash">Bkash</option>
+        <option value="Rocket">Rocket</option>
+    </select><br>
+
+    <label for="toAccount">To Account:</label>
+    <select id="toAccount" required>
+        <option value="Cash">Cash</option>
+        <option value="Bank">Bank</option>
+        <option value="Bkash">Bkash</option>
+        <option value="Rocket">Rocket</option>
+    </select><br>
+
+    <label for="transferAmount">Amount:</label>
+    <input type="number" id="transferAmount" required><br>
+
+    <button type="submit">Transfer</button>
+</form>
+</div>
+</div>
+
+
+    <!-- Expense and Income Tables -->
+    <h2>Expense Table</h2>
+<table>
+    <thead>
+        <tr>
+            <th>Date</th>
+            <th>Category</th>
+            <th>Amount</th>
+            <th>Notes</th>
+        </tr>
+    </thead>
+    <tbody id="expenseTableBody">
+        <!-- Expense entries will be added here -->
+    </tbody>
+</table>
+
+<!-- Income Table -->
+<h2>Income Table</h2>
+<table>
+    <thead>
+        <tr>
+            <th>Date</th>
+            <th>Source</th>
+            <th>Amount</th>
+            <th>Notes</th>
+        </tr>
+    </thead>
+    <tbody id="incomeTableBody">
+        <!-- Income entries will be added here -->
+    </tbody>
+</table>
+
+    <script>
+        // JavaScript code for handling expense and income entries
+        const expenseForm = document.getElementById("expenseForm");
+        const incomeForm = document.getElementById("incomeForm");
+        const expenseTableBody = document.getElementById("expenseTableBody");
+        const incomeTableBody = document.getElementById("incomeTableBody");
+
+        // Event listener for expense submission
+        expenseForm.addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            const expenseDate = document.getElementById("expenseDate").value;
+            const expenseCategory = document.getElementById("expenseCategory").value;
+            const expenseAmount = document.getElementById("expenseAmount").value;
+            const expenseNotes = document.getElementById("expenseNotes").value;
+
+            // Create a new row in the expense table
+            const expenseRow = document.createElement("tr");
+            expenseRow.innerHTML = `
+                <td>${expenseDate}</td>
+                <td>${expenseCategory}</td>
+                <td>$${expenseAmount}</td>
+                <td>${expenseNotes}</td>
+            `;
+
+            // Add the new row to the expense table
+            expenseTableBody.appendChild(expenseRow);
+
+            // Clear the expense form fields
+            expenseForm.reset();
+        });
+
+        // Event listener for income submission
+        incomeForm.addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            const incomeDate = document.getElementById("incomeDate").value;
+            const incomeSource = document.getElementById("incomeSource").value;
+            const incomeAmount = document.getElementById("incomeAmount").value;
+            const incomeNotes = document.getElementById("incomeNotes").value;
+
+            // Create a new row in the income table
+            const incomeRow = document.createElement("tr");
+            incomeRow.innerHTML = `
+                <td>${incomeDate}</td>
+                <td>${incomeSource}</td>
+                <td>$${incomeAmount}</td>
+                <td>${incomeNotes}</td>
+            `;
+
+
+            // JavaScript code for handling money transfers
+const transferForm = document.getElementById("transferForm");
+
+transferForm.addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    const fromAccount = document.getElementById("fromAccount").value;
+    const toAccount = document.getElementById("toAccount").value;
+    const transferAmount = document.getElementById("transferAmount").value;
+
+    if (fromAccount === toAccount) {
+        alert("You cannot transfer money to the same account.");
+        return;
+    }
+
+    if (accountBalances[fromAccount] < transferAmount) {
+        alert("Insufficient funds in the selected 'From Account'.");
+        return;
+    }
+
+    // Update account balances
+    accountBalances[fromAccount] -= parseFloat(transferAmount);
+    accountBalances[toAccount] += parseFloat(transferAmount);
+
+    // Display the transfer in the recent changes
+    const transferItem = document.createElement("li");
+    transferItem.textContent = `Transferred $${transferAmount} from ${fromAccount} to ${toAccount}`;
+    recentChanges.appendChild(transferItem);
+
+    // Update the account balance displays
+    updateAccountBalanceDisplay(fromAccount);
+    updateAccountBalanceDisplay(toAccount);
+
+    // Clear the transfer form fields
+    transferForm.reset();
+});
+
+            // Add the new row to the income table
+            incomeTableBody.appendChild(incomeRow);
+
+            // Clear the income form fields
+            incomeForm.reset();
+        });
+    </script>
+</body>
+</html>

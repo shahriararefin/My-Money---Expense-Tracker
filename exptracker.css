@@ -1,0 +1,313 @@
+.navbar{
+    background-color: aquamarine;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 50px;
+    justify-content: space-between;
+    
+    
+}
+
+a{
+    font-size: 30px;
+}
+
+#dollar{
+    
+    margin-right: 180vh;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+div {
+    display: block;
+}
+main{
+    padding-top: 100px;
+    padding-left: 200px;
+}
+.container {
+    max-width: calc(100% - 125px);
+    margin-left: 125px;
+    margin-top: 1em;
+}
+.ui.grid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: stretch;
+    padding: 0;
+    margin: -1rem;
+}
+
+.container-full-page {
+    display: block;
+    background-color: #fff;
+    font-size: 1.14285714rem;
+    line-height: 1.5;
+}
+*, :after, :before {
+    box-sizing: inherit;
+}
+
+body {
+    height: auto!important;
+    margin: 0;
+    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Roboto,Helvetica Neue;
+}
+::selection {
+    background-color: #cce2ff;
+    color: rgba(0,0,0,.87);
+}
+
+/* .ui.grid>.row {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: inherit;
+    align-items: stretch;
+    width: 100%!important;
+    padding: 1rem 0;
+} */
+
+.section__header {
+    display: table;
+    width: 100%;
+    cursor: pointer;
+    padding: 1em 0;
+}
+
+
+.account-widget {
+    border: 1px solid #d4d4d5;
+    border-radius: 0.28571429rem;
+}
+.account-widget-group:first-child {
+    border-top: none;
+}
+
+.account-widget-group__header {
+    display: table;
+    width: 100%;
+    cursor: pointer;
+}
+
+.account-widget-group__name, .account-widget-group__total {
+    display: table-cell;
+    font-weight: 500;
+    background-color: rgba(77,78,80,.05);
+    padding: 0.5em 1em;
+}
+.account-widget-group__total {
+    width: 1px;
+    white-space: nowrap;
+}
+
+.positive {
+    color: #21ba45;
+}
+.mono {
+    font-family: Roboto Mono,monospace;
+    color: #686869;
+}
+
+.account-widget-account {
+    width: 100%;
+    border-top: 1px solid #d4d4d5;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: top;
+}
+
+.account-widget-account__name {
+    flex-basis: 100%;
+    white-space: nowrap;
+}
+.account-widget-account__balance {
+    text-align: right;
+    white-space: nowrap;
+    flex: 1 1;
+    flex-flow: column nowrap;
+}
+.account-widget-account__balance, .account-widget-account__name {
+    display: flex;
+    padding: 0.5em 1em;
+}
+
+.account-widget-account__name {
+    padding: 0.5em 0.5em 0.5em 1em;
+}
+
+*, :after, :before {
+    box-sizing: inherit;
+}
+
+.ui.attached.menu:not(.tabular) {
+    border: 1px solid #d4d4d5;
+}
+
+.ui.attached.item.menu {
+    margin: 0 -1px!important;
+}
+
+.ui.top.attached.menu>.item:first-child {
+    border-radius: 0.28571429rem 0 0 0;
+}
+.ui.menu.three.item .item {
+    width: 33.333%;
+}
+.ui.menu .red.active.item, .ui.red.menu .active.item {
+    border-color: #db2828!important;
+    color: #db2828!important;
+}
+.ui.menu .active.item {
+    box-shadow: inset 0 1px 4px 0 rgba(34,36,38,.12)!important;
+}
+
+.ui.segment[class*="bottom attached"] {
+    bottom: 0;
+    margin-top: 0;
+    top: 0;
+    margin-bottom: 1rem;
+    box-shadow: 0 1px 2px 0 rgba(34,36,38,.15),none;
+    border-radius: 0 0 0.28571429rem
+rem
+ 0.28571429rem;
+}
+.ui.form {
+    font-size: 1rem;
+}
+
+form {
+    display: block;
+    margin-top: 0em;
+}
+
+.ui.form .field>.selection.dropdown {
+    width: 100%;
+}
+.ui.selection.dropdown {
+    cursor: pointer;
+    word-wrap: break-word;
+    line-height: 1em;
+    white-space: normal;
+    outline: 0;
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+    min-width: 14em;
+    min-height: 2.71428571em;
+    background: #fff;
+    display: inline-block;
+    padding: 0.78571429em 2.1em 0.78571429em 1em;
+    color: rgba(0,0,0,.87);
+    box-shadow: none;
+    border: 1px solid rgba(34,36,38,.15);
+    border-radius: 0.28571429rem;
+    -webkit-transition: width .1s ease,-webkit-box-shadow .1s ease;
+    -webkit-transition: box-shadow .1s ease,width .1s ease;
+    transition: box-shadow .1s ease,width .1s ease;
+}
+.ui.dropdown {
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+    outline: 0;
+    text-align: left;
+    -webkit-transition: width .1s ease,-webkit-box-shadow .1s ease;
+    -webkit-transition: box-shadow .1s ease,width .1s ease;
+    transition: box-shadow .1s ease,width .1s ease;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.ui.dropdown>.text {
+    display: inline-block;
+    -webkit-transition: none;
+    transition: none;
+}
+.ui.form .field>.selection.dropdown>.dropdown.icon {
+    float: right;
+}
+
+.ui.selection.dropdown .menu {
+    max-height: 21.37142857rem;
+}
+
+.ui.dropdown .menu .active.item {
+    font-weight: 500!important;
+}
+.ui.dropdown .menu .selected.item, .ui.dropdown.selected {
+    background: rgba(0,0,0,.03);
+    color: rgba(0,0,0,.95);
+}
+.ui.dropdown .menu>.item>.description, .ui.dropdown>.text>.description {
+    float: right;
+    margin: 0 0 0 1em;
+    color: rgba(0,0,0,.4);
+}
+.ui.selection.dropdown .menu>.item {
+    border-top: 1px solid #fafafa;
+    padding: 0.78571429rem 1.14285714rem!important;
+    white-space: normal;
+    word-wrap: normal;
+}
+.ui.dropdown .menu>.item>.description, .ui.dropdown>.text>.description {
+    float: right;
+    margin: 0 0 0 1em;
+    color: rgba(0,0,0,.4);
+}
+
+.ui.dropdown .menu>.item {
+    position: relative;
+    cursor: pointer;
+    display: block;
+    height: auto;
+    text-align: left;
+    border: none;
+    line-height: 1em;
+    color: rgba(0,0,0,.87);
+    padding: 0.78571429rem 1.14285714rem!important;
+    font-size: 1rem;
+    text-transform: none;
+    font-weight: 400;
+    box-shadow: none;
+    -webkit-touch-callout: none;
+}
+
+.ui.form .five.wide.field {
+    width: 31.25%!important;
+}
+
+.ui.form .field .ui.input, .ui.form .fields .field .ui.input, .ui.form .wide.field .ui.input {
+    width: 100%;
+}
+
+.ui.form .wide.field .ui.input input {
+    flex: 1 0 auto;
+    width: 0;
+}
+.transaction-form .ui.labeled.input .label {
+    width: 4.9em!important;
+    font-family: Roboto Mono,monospace!important;
+}
+
+.ui.labeled.input>.label:not(.corner) {
+    padding-top: 0.78571429em;
+    padding-bottom: 0.78571429em;
+}
+.ui[class*="right labeled"].input>input+.label {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+.ui.labeled.input>.label {
+    flex: 0 0 auto;
+    margin: 0;
+    font-size: 1em;
+}

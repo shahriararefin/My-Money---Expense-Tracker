@@ -1,0 +1,95 @@
+/* Add your CSS styles here */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('calimg.png'); /* Replace with your background image URL */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: #f5f5f5; /* Light gray background color */
+}
+
+.navbar {
+    background-color: aquamarine;
+    color: black;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.navbar h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.body {
+    text-align: center;
+    margin-top: 20px;
+}
+
+h2 {
+    color: #333;
+}
+
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.login-section,
+.signup-section {
+    background-color: #fff; /* White background */
+    padding: 30px;
+    max-width: 400px;
+    margin: 20px;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Shadow effect */
+    text-align: center;
+}
+
+.login-section h2 {
+    color: #333;
+    font-size: 28px;
+    margin-top: 0;
+}
+
+.login-section p {
+    color: #555;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.login-section input[type="email"],
+.login-section input[type="password"] {
+    width: 80%;
+    padding: 12px; /* Increased padding for better input control */
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 18px;
+    background-color: #f9f9f9;
+    color: #333;
+    outline: none; /* Remove input focus outline */
+}
+
+.login-section button {
+    padding: 12px 0; /* Increased padding for button and centering */
+    width: 40%; /* Set button width to 40% */
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    display: block;
+    font-size: 20px;
+    transition: background-color 0.3s ease;
+    margin: 0 auto; /* Center button horizontally */
+}
+
+.login-section button:hover {
+    background-color: #555;
+}
